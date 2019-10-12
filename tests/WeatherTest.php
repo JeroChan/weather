@@ -1,12 +1,20 @@
 <?php
 
+/*
+ * This file is part of the overtrue/weather.
+ *
+ * (c) jerochan <446363041@qq.com>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace Jero\Weather\Tests;
 
 use GuzzleHttp\Client;
 use GuzzleHttp\ClientInterface;
 use GuzzleHttp\Psr7\Response;
 use Mockery\Matcher\AnyArgs;
-use Jero\Weather\Exceptions\Exception;
 use Jero\Weather\Exceptions\HttpException;
 use Jero\Weather\Exceptions\InvalidArgumentException;
 use Jero\Weather\Weather;
@@ -34,7 +42,6 @@ class WeatherTest extends TestCase
 
         $this->assertSame(['success' => true], $weather->getWeather('深圳'));
 
-
         $response = new Response(200, [], '<hello>content</hello>');
 
         $client = \Mockery::mock(Client::class);
@@ -52,7 +59,6 @@ class WeatherTest extends TestCase
         $weather->allows()->getHttpClient()->andReturn($client);
 
         $this->assertSame('<hello>content</hello>', $weather->getWeather('深圳', 'all', 'xml'));
-
     }
 
     public function testGetHttpClient()
