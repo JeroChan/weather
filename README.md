@@ -1,5 +1,7 @@
 <h1 align="center"> jero/weather </h1>
 
+[![Build Status](https://travis-ci.org/JeroChan/weather.svg?branch=master)](https://travis-ci.org/JeroChan/weather)
+
 <p align="center"> A weather SDK.</p>
 
 
