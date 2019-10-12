@@ -1,6 +1,7 @@
 <h1 align="center"> jero/weather </h1>
 
 [![Build Status](https://travis-ci.org/JeroChan/weather.svg?branch=master)](https://travis-ci.org/JeroChan/weather)
+![StyleCI build status](https://github.styleci.io/repos/214391481/shield) 
 
 <p align="center"> A weather SDK.</p>
 
